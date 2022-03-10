@@ -54,13 +54,14 @@ cardArray.sort(() => 0.5 - Math.random());
 const gridDisplay = document.getElementById('grid');
 
 function createBoard() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < cardArray.length; i++) {
     const card = document.createElement('img');
     card.setAttribute(
       'src',
       'https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80'
     );
     card.setAttribute('data-id', i);
+    gridDisplay.appendChild(card);
     console.log(card, i);
   }
 }
