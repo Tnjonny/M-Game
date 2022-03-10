@@ -61,8 +61,14 @@ function createBoard() {
       'https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80'
     );
     card.setAttribute('data-id', i);
+    card.addEventListener('click', flipCard);
     gridDisplay.appendChild(card);
-    console.log(card, i);
   }
 }
 createBoard();
+
+function flipCard() {
+  let cardId = this.getAttribute('data-id');
+  cardArray[cardId];
+  console.log('test', cardId);
+}
