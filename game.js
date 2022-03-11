@@ -53,6 +53,7 @@ cardArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.getElementById('grid');
 const cardsChoosen = [];
+const cardsChoosenIds = [];
 
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
@@ -69,7 +70,13 @@ function createBoard() {
 createBoard();
 
 function checkMatch() {
+  const cards = document.querrySelectorAll('img');
+
   console.log('check for match');
+  if (cardsChoosen[0] == cardsChoosen[1]) {
+    alert('MATCH');
+    cards[];
+  }
 }
 
 function flipCard() {
