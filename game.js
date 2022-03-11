@@ -52,6 +52,7 @@ const cardArray = [
 cardArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.getElementById('grid');
+const cardsChoosen = [];
 
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
@@ -68,7 +69,9 @@ function createBoard() {
 createBoard();
 
 function flipCard() {
-  let cardId = this.getAttribute('data-id');
-  cardArray[cardId];
+  const cardId = this.getAttribute('data-id');
+  console.log(cardArray);
+  cardsChoosen.push(cardArray[cardId].name);
   console.log('test', cardId);
+  console.log(cardsChoosen);
 }
